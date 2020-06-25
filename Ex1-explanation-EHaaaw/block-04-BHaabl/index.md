@@ -1,8 +1,8 @@
 ## BLOCK-readText
 
-#### Understanding the Flex Item properties.
+#### Understanding the Flex Item properties
 
-In the last section, we have seen all the properties and values for the flex-container. We saw how we can align the items on the "main-axis" or "cross-axis" and how to utilize the extra space inside a flex-container. Like flex-container, there are few properties that we can apply on flex-items.
+In the last section, we have seen all the properties and values for a flex-container. We saw how to align items on the "main-axis" or the "cross-axis" and how to utilize the extra space inside a flex-container. Just like with a flex-container, there are a few properties that we can apply on flex-items too.
 
 The properties that can be applied to flex-items are:
 
@@ -10,9 +10,9 @@ The properties that can be applied to flex-items are:
 
 ##### A. Order
 
-The `order` property is used to reorder the flex-item within a flex-container without changing the source code in an HTML document. By default, we know that the elements are laid out according to the order in which it is written in the HTML document.
+The `order` property is used to reorder flex-items within a flex-container without changing the source code in an HTML document.
 
-However, we can reorder the place of items on a page with `order` property in the flexbox. For example, let's say we want our first item at the end.
+By default, we know that the elements are laid out according to the order in which they are written in the HTML document. However, we can reorder the position of items on a page with the `order` property in flexbox. For example, let's say we want our first item at the end:
 
 ```
   <div class="container">
@@ -37,7 +37,7 @@ However, we can reorder the place of items on a page with `order` property in th
 
 ![Flexbox Order Property](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/order1.png)
 
-The item-1 will at the end because of its order `1`. By default, every item has `0` value for the `order` property. The property accepts unitless value in number, it can be negative or positive. The items are reordered according to the values applied to the order property, from lowest to highest. If the order value for the items is the same then the items are laid out according to the order appeared in HTML source code.
+The item-1 will be at the end because of its order `1`. By default, every item has `0` value for the `order` property. The property accepts unitless value in numerals, and it can be negative or positive. The items are reordered according to the values applied to the order property, from lowest to highest. If the order values for all the items are the same, then the items are laid out according to the order in which they appear in the HTML source code.
 
 Let's see another example where we will reorder the 4th item at the first position and 1st item at the last.
 
@@ -69,9 +69,9 @@ Let's see another example where we will reorder the 4th item at the first positi
 
 ##### B. Flex Grow
 
-The flex-grow property allows the items to grow if there is extra space inside the flex container. The property accepts unitless value in number which provides the ability to grow to the items.
+The flex-grow property allows the items to grow if there is extra space inside the flex container. The property accepts unitless value in number which provides the items an ability to grow.
 
-By default, the value for the flex-grow property is `0`, which means the size of the item will be auto. It may accept any value but not negative. If we want the item to grow and fill the extra space inside the container, we will have to apply `flex-grow` property and set the value greater than `0`. Let's check out the property visually.
+By default, the value for the flex-grow property is `0`, which means the size of the item will be auto. It may accept any value except negative ones. If we want the item to grow and fill the extra space inside the container, we will have to apply `flex-grow` property and set the value greater than `0`. Let's check out the property visually.
 
 Suppose we have two items inside a flex-container and we want the items to grow in the same proportionality. Then we can set the value 1 for `flex-grow` property for the items.
 
@@ -125,7 +125,7 @@ If one of the items has a value of 2, the remaining space would take up twice as
 
 The `flex-shrink` property is opposite to the `flex-grow` property. It allows the items to shrink if there is no extra space in the container. For the practical view, just reduce the size of your screens. You will find the width of the items is also reducing as the size of screens is reducing.
 
-By default, the value for `flex-shrink` property is 1. Similar to `flex-grow` property the `flex-shrink` property also accepts a unitless value but greater than `0`. Negative values are invalid.
+By default, the value for `flex-shrink` property is 1. Similar to the `flex-grow` property, the `flex-shrink` property also accepts a unitless value that is greater than 0. Negative values are invalid.
 
 ```
   <div class="container">
@@ -153,7 +153,7 @@ This is what we will see after applying `flex-shrink: 1` and `flex-basis: 300px`
 
 ![Flex Shrink Property](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/flex-shrink2.png)
 
-However, if we set `0` value for the `flex-shrink` property the item size won't reduce as per the size of the screens. The item will overflow in the flex container.
+However, if we set `0` value for the `flex-shrink` property, the item size won't reduce as per the size of the screens. The item will overflow in the flex container.
 
 ```
   <div class="container">
@@ -177,9 +177,9 @@ However, if we set `0` value for the `flex-shrink` property the item size won't 
 
 ##### D. Flex Basis
 
-We got a bit introduction of `flex-basis` property in the last section. The `flex-basis` property is somewhat similar to the width property, as it accepts the values(in px, %, em, rem, etc.) similar to the width property. The `flex-basis` property is applied to set a base width or size of the flex-item from where the item will grow or shrink if necessary.
+We got a small introduction of the `flex-basis` property in the last section. The `flex-basis` property is somewhat similar to the width property, as it accepts the values(in px, %, em, rem, etc.) similar to the width property. The `flex-basis` property is applied to set a base width or size of the flex-item from where the item will grow or shrink if necessary.
 
-By default, the value for flex-basis property is auto, which means the base size of the item will be computed based on the content inside it plus whatever the padding we will apply to the item.
+The default value for the flex-basis property is auto, which means the base size of the item will be computed based on the content inside it plus whatever the padding that has been applied to the item.
 
 ```
   <div class="container">
@@ -202,7 +202,7 @@ By default, the value for flex-basis property is auto, which means the base size
 
 ##### Flex
 
-The `flex` property is the shorthand property for the `flex-grow`, `flex-shrink`, and `flex-basis`.
+The `flex` property is the shorthand property for the `flex-grow`, `flex-shrink`, and `flex-basis` properties.
 
 ```
   .item {
@@ -210,7 +210,7 @@ The `flex` property is the shorthand property for the `flex-grow`, `flex-shrink`
   }
 ```
 
-This is the default value for the `flex` property where the first value is for `flex-grow`, second is for `flex-shrink` and the last value is for `flex-basis`. The last two value for flex property is optional.
+This is the default value for the `flex` property where the first value is for `flex-grow`, second is for `flex-shrink` and the last value is for `flex-basis`. The last two values for flex property are optional.
 
 ```
   .item {
@@ -224,7 +224,7 @@ It's better to go with the `flex` shorthand property, instead of applying `flex-
 
 ##### F. Align Self
 
-The `align-self` property is exactly similar to align-items property. It accepts all the same values as the `align-items` accepts. The only difference is that the `align-self` property is applied to the flex-items but the `align-items` property is applied to the flex container.
+The `align-self` property is exactly similar to the `align-items` property. It accepts all the same values as the `align-items` accepts. The only difference is that the `align-self` property is applied to the flex-items but the `align-items` property is applied to the flex container.
 
 ```
   .container {
@@ -255,7 +255,7 @@ Also, we all know from the above discussion that "align" always works on the "cr
 
 ###### Auto
 
-The `auto` value for `align-self` property inherits, whatever the value is set for `align-items` in the flex-container. If it is `flex-star`, the `align-self` value will be also `flex-start`.
+The `auto` value for `align-self` property inherits, whatever the value is set for `align-items` in the flex-container. If it is `flex-start`, the `align-self` value will also be `flex-start`.
 
 ```
   .item3 {
@@ -315,7 +315,7 @@ The item will be aligned at the center on the "cross-axis".
 
 ###### Baseline
 
-We have already seen baseline value for align-items property for the "flex-container". The baseline value for `align-self` property also works in the same way.
+We have already seen the "baseline" value for the "align-items" property for the "flex-container". The baseline value for `align-self` property also works in the same way.
 
 ```
   .item3 {

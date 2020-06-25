@@ -1,6 +1,118 @@
-
+/* ---------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------- */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
-/* This is a slightly adjusted version of the box-sizing reset for ensuring that components inside an explicitly declared content-box are also content-box'ed */
+/* ---------------------------------------------------------------
+Box sizing
+--------------------------------------------------------------- */
 
 html{box-sizing:border-box}*,*:after,*:before{box-sizing:inherit}
+
+
+/* ---------------------------------------------------------------
+Base Styles
+--------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap');
+
+body {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 auto;
+  /* This gives us padding for mobile screens */
+  padding: 0 30px;
+  background-color: goldenrod;
+  font-family: 'Bree Serif', serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ---------------------------------------------------------------
+Project Specific Styles
+--------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------
+Header
+--------------------------------------------------------------- */
+
+header, main, footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  opacity: 0.5;
+  border-bottom: 2px solid black;
+}
+
+img {
+  border: 7px solid black;
+}
+
+.main-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-article-text {
+  text-align: left;
+  max-width: 50%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  min-width: 30%;
+  margin: 1%;
+}
+
+footer {
+  text-align: center;
+}

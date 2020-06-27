@@ -23,7 +23,9 @@ body {
 }
 
 h1 {
-  font-size: 1.6em;
+  font-size: 2.4em;
+  color: white;
+  font-weight: 700;
 }
 
 h2 {
@@ -38,14 +40,17 @@ h3 {
 Header
 --------------------------------------------------------------- */
 
-header, main, footer {
-  padding: 0 50px;
-}
-
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #5C4776;
+  padding: 20px 50px;
+}
+
+.logo {
+  color: white;
+  font-weight: 700;
 }
 
 header nav ul {
@@ -78,92 +83,68 @@ header nav a:hover {
 /* ---------------------------------------------------------------
 Main
 --------------------------------------------------------------- */
+.container {
+  padding: 30px 50px;
+}
 
-main {
+.hero {
+  background-color: #5C4776;
   display: flex;
-  flex-basis: 800px;
+  padding-top: 100px;
+  padding-bottom: 70px;
 }
 
-aside {
-  flex-basis: 500px;
-  background-color: #a3caea;
-  border-radius: 15px;
-  margin-right: 20px;
-  padding: 10px;
+.hero section {
+  flex: 1;
 }
 
-aside nav {
-  height: 100%;
+.hero p {
+  color: gray;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-aside nav a {
-  text-decoration: none;
-  color: black;
-  display: block;
+.double-col {
+  display: flex;
 }
 
-.nav-ul {
+.double-col > * {
+  flex: 1;
+}
+
+.double-col .section-01 > * {
+  margin-bottom: 20px;
+}
+
+.double-col .section-02 ul {
+  /* align-content: space-around; */
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.top-nav li, .bottom-nav li {
-  border-radius: 5px;
-  font-weight: 700;
-  padding: 10px;
-}
-
-.top-nav li:hover{
-  border: 3px solid orange;
-}
-
-.top-nav li:hover a{
-  color: orange;
-}
-
-.bottom-nav {
-}
-
-.top-nav {
-}
-
-.log-out {
-  background-color: #f2f8fd;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.log-out:hover {
-  opacity: 0.6;
-}
-
-article {
-  background-color: #f2f8fd;
-  /* background-color: black; */
-  border-radius: 15px;
-  padding: 20px;
-}
-
-article > h2, article > p, article > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.read-more-btn {
+/* Button */
+.btn {
   display: inline-block;
-  background-color: #37b667;
   text-decoration: none;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid gray;
+  border-radius: 25px;
   padding: 10px 30px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: black;
 }
 
-.read-more-btn:hover {
+.btn:hover {
   opacity: 0.6;
+}
+
+.get-started-btn {
+  border: none;
+  color: white;
+  background-color: #5ebd8b;
 }
 
 

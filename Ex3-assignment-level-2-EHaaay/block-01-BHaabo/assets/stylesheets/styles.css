@@ -96,7 +96,7 @@ main {
   flex-basis: 800px;
 }
 
-aside {
+.side-nav {
   flex-basis: 500px;
   background-color: #a3caea;
   border-radius: 15px;
@@ -104,11 +104,11 @@ aside {
   padding: 10px;
 }
 
-aside nav {
+.side-nav nav {
   height: 100%;
 }
 
-aside nav a {
+.side-nav nav a {
   text-decoration: none;
   color: black;
   display: block;

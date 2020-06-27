@@ -19,25 +19,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 0 auto;
-  background-color: white;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-size: 3.2em;
-  font-weight: 700;
-  color: #222946;
+  font-size: 1.6em;
 }
 
 h2 {
-  font-size: 2.5em;
-  font-weight: 700;
-  color: #222946;
+  font-size: 1.4em;
 }
 
 h3 {
   font-size: 1.2em;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* ---------------------------------------------------------------
@@ -45,14 +39,13 @@ Header
 --------------------------------------------------------------- */
 
 header, main, footer {
-  padding: 20px 50px;
+  padding: 0 50px;
 }
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #222946;
 }
 
 header nav ul {
@@ -71,26 +64,21 @@ header nav li:last-child {
 
 header nav a {
   text-decoration: none;
-  color: white;
   text-transform: uppercase;
+  color: #5ebd8b;
+  font-size: 0.9em;
+  font-weight: 700;
 }
 
 header nav a:hover {
-  opacity: 0.5;
-  border-bottom: 2px solid black;
-}
-
-header nav a:active {
-  color: green;
-}
-
-header img {
-  width: 100px;
+  opacity: 0.6;
+  border-bottom: 2px solid #5ebd8b;
 }
 
 /* ---------------------------------------------------------------
 Main
 --------------------------------------------------------------- */
+
 main {
   display: flex;
   flex-basis: 800px;
@@ -184,17 +172,11 @@ Footer
 --------------------------------------------------------------- */
 
 footer {
-  background-color: #222946;
-  color: white;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  color: gray;
 }
-
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
-footer nav ul {
-  display: flex;
+/* Make the hr extend to the end */
+footer hr {
+  border: 0;
+  border-bottom: 1px solid gray;
 }
